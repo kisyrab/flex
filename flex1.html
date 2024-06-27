@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+
+    <style type="text/css">
+
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        ul, li, ol{list-style: none;}
+        a{text-decoration: none; color: inherit;}
+        body{background-color: wheat;}
+
+        .wrap{
+            width: 600px;
+            height: 400px;
+            border: 1px black solid;
+            margin: 0 auto;
+            display: flex;
+            background-color: darkolivegreen;
+            /* 플렉스 구조는 바꾸고자 하는 것의 부모에게 건다. */
+            flex-direction: row; /* 기본값 */
+            /* flex-direction: row-reverse;
+            flex-direction: column;
+            flex-direction: column-reverse; */
+
+            flex-wrap: nowrap; /* 기본값 */
+            flex-wrap: wrap; /* 부모너비보다 넓으면 아래로 떨어짐 */
+
+            /* 남는 여백을 균등하게 나누기 */
+            justify-content: flex-end; /* 여유공간을 앞으로 몰아주기 */
+            justify-content: space-between; /* 처음과 끝은 벽에 붙이고 여유공간을 사이사이만 균등분할 */
+            justify-content: space-around; /* 여유공간을 균등분할(앞,뒤,사이) */
+            justify-content: flex-start; /* 기본값 ; 여유공간을 뒤로 몰아주기 */
+            /* justify-content: space-evenly; */
+            
+            /* 세로정렬 */
+            align-content: stretch; /* 기본값 ; 아이템에 높이가 없을때  */
+            align-content: flex-start; /* 위로 올라감 */
+            align-content: flex-end; /* 아래로 내려감 */
+            align-content: space-around; /* 각 행을 균등하게 나눔 */
+            align-content: space-between; /* 부모의 양끝 종단으로 보냄 */
+        }
+
+        .item{
+            background-color: salmon;
+            border: 1px solid white;
+            padding: 0 30px;
+            text-align: center;
+            height: 150px;
+            /* width: 150px; */
+        }
+
+
+        .box{
+            width: 100%;
+            height: 300px;
+            margin: 100px auto;
+            border: 1px solid black;
+            background-color: darkkhaki;
+            display: flex;
+            justify-content: space-around;
+            align-items: center; /* 한줄일때 균등 정렬 */
+        }
+        
+        .box_inner{
+            border: 1px solid white;
+            background-color: darkolivegreen;
+            width: 200px; height: 200px;
+        }
+        
+        .menu{
+            width: 50%;
+            background-color: darkolivegreen;
+            border: 1px solid black;
+            margin: 100px auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .menu li{
+            
+        }
+        
+        .menu li a{
+            display: block;
+            background-color: salmon;
+            border: 1px solid white;
+            padding: 10px 20px;
+        }
+        
+        
+        
+        .logo{
+            width: 200px; height: 100px;
+            background-color: salmon;
+            border: 1px solid white;
+            margin: 100px;
+            /* 중앙정렬 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .logo a{
+            display: block;
+            width: 180px;
+            height: 80px;
+            background-color: darkolivegreen;
+            
+        }
+        
+        
+        .header{
+            width: 100%;
+            height: 100px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo1{
+            border: 1px solid white;
+            height: 50px;
+        }
+
+        .nav{
+            border: 1px solid white;
+            height: 70px;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+
+
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="item">1 <br>123 <br>7896465132</div>
+        <div class="item">2 <br>798645 <br>54</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+    </div>
+
+        
+    <div class="box">
+        <div class="box_inner">box1</div>
+        <div class="box_inner">box2</div>
+        <div class="box_inner">box3</div>
+    </div>
+
+
+    <ul class="menu">
+        <li><a href="#">MENU01</a></li>
+        <li><a href="#">MENU02</a></li>
+        <li><a href="#">MENU03</a></li>
+        <li><a href="#">MENU04</a></li>
+        <li><a href="#">MENU05</a></li>
+    </ul>
+
+    <h1 class="logo">
+        <a href="#">LOGO</a>
+    </h1>
+
+    <header class="header">
+        <h1 class="logo1">LOGO</h1>
+        <nav class="nav">MENU</nav>
+    </header>
+
+
+        
+
+</body>
+</html>
